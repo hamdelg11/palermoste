@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Precios</title>
+        <link rel="stylesheet"  type="text/css" href="menu.css">
+        <link rel="stylesheet" type="text/css" href="style_vent.css"/>
+        <script type="text/javascript" src="js/productos.js"></script>
+
+    </head>
+    <body>
+      <div id=menu>
+
+        <div id="info">
+          <h1>Palermo's Tea</h1>
+          <h3>Pasion por el té</h3>
+        </div>
+        <nav id="list">
+          <ul id="listamenu">
+            <li><a href="index.html">¿Quiénes somos?</a></li>
+            <li class="separador">|</li>
+            <li ><a href="valores.html">¿Qué nos representa?</a></li>
+            <li class="separador">|</li>
+            <li><a href="informacion.html">¿Sabias qué?</a></li>
+            <li class="separador">|</li>
+            <li><a href="productos.html">Nuestros productos</a></li>
+            <li class="separador">|</li>
+            <li><a href="tablas.html">Precios</a></li>
+            <li class="separador">|</li>
+            <li><a href="venta.html">Realizar compra</a></li>
+           </ul>
+        </nav>
+      </div>
+
+
+        <section class="padre form-register">
+            <h1> Venta de productos</h1>
+
+            <div class="form">
+                    <form name="formulario1" action="#">
+                <select class="seleccion cajaForm controls " name="cosa" onchange="cambia()" >
+                    <option value="0">Seleccione su tipo de producto que desea.</option>
+                    <option value="1">Té verde</option>
+                    <option value="2">Té blanco</option>
+                    <option value="3">Té negro</option>
+                    <option value="4">Tisanas</option>
+
+                </select>
+
+
+                <div>
+                    <select class="seleccion cajaForm controls" name="opt" >
+
+
+                    <option value="-">-
+
+                 </div>
+<br>
+                    <div class="matri"></div>
+
+
+
+
+                    <div class="matri">
+
+                        <input required placeholder="Ingrese su nombre(s) completo" name="nonbre" type="text" class="cajaForm controls">
+                    </div>
+
+                    <div class="select">
+                        <select required id="selectCantidad" name="Cantidad" class="form-control cajaForm controls">
+                            <option value="">Seleccione su porcion que desea.</option>
+
+                                <option value="1">50 gramos</option>
+                                <option value="2">100 gramos</option>
+                                <option value="3">250 gramos</option>
+                                <option value="4">1 kilogramo</option>
+
+            </select>
+                </div>
+                        <div>
+
+
+                        <input type="email" required placeholder="Ingrese correo electronico" class="cajaForm controls">
+
+
+                        </div>
+
+                        <div>
+
+
+                            <input type="text" maxlength="10" required placeholder="Ingrese su numero de telefono" class="cajaForm controls">
+
+
+                            </div>
+
+
+                        <input type="submit" value="Comprar" class="botons">
+
+
+
+
+
+
+            </form>
+                </div>
+
+        </section>
+
+    </body>
+</html>
