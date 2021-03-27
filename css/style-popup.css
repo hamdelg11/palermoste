@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+/*
+.btn-open-popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #D90C43;
+    display: block;
+    background: white;
+    padding: 20px 50px;
+    border-radius: 50px;
+}*/
+
+
+.container-all{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    padding: 40px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 600ms;
+}
+
+
+.container-all:target{
+    background: rgba(0,0,0,0.8);
+    visibility: visible;
+    opacity: 1;
+}
+
+.container-all:target .popup{
+    top: 50%;
+    left: 50%;
+    transform: rotate(0deg) translate(-50%, -50%);
+    visibility: visible;
+}
+
+
+.popup{
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    background: white;
+    visibility: hidden;
+    top: -80%;
+    left: -80%;
+    transform: rotate(90deg) translate(-150%, 230%);
+    transition: all 600ms;
+}
+
+
+.img{
+    width: 40%;
+    background-image: url(/img2/apple-chai1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.img2{
+  width: 40%;
+  background-image: url(/img2/chai-verde1.PNG);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.img3{
+  width: 40%;
+  background-image: url(/img2/choco-vainilla1.PNG);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.img4{
+  width: 40%;
+  background-image: url(/img2/earl-grey-con-bergamota1.PNG);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.img5{
+  width: 40%;
+  background-image: url(/img2/granada-jengibre1.PNG);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.img6{
+  width: 40%;
+  background-image: url(/img2/Gun-Powder1.PNG);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.img7{
+  width: 40%;
+  background-image: url(/img2/honeybush-earl-grey1.PNG);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.img8{
+  width: 40%;
+  background-image: url(/img2/jasmine-mint1.PNG);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.img9{
+  width: 40%;
+  background-image: url(/img2/kane-wa1.PNG);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.img10{
+  width: 40%;
+  background-image: url(/img2/manzana-vainilla1.PNG);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.img11{
+  width: 40%;
+  background-image: url(/img2/rooibos-caramel1.PNG);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.img12{
+  width: 40%;
+  background-image: url(/img2/te-negro-con-chocolate1.PNG);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.img13{
+  width: 40%;
+  background-image: url(/img2/te-verde1.PNG);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.img14{
+  width: 40%;
+  background-image: url(/img2/vainilla-jazmin1.PNG);
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+
+
+
+.container-text{
+    width: 60%;
+    padding: 50px;
+    overflow-y: auto;
+}
+
+
+.container-text h1{
+    font-size: 30px;
+}
+
+.container-text p{
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+
+.btn-close-popup{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    padding: 20px;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    line-height: 10px;
+}
+
+@media screen and (max-width: 900px){
+    .popup{
+        flex-direction: column;
+        height: 100%;
+        max-height: 800px;
+    }
+
+    .img{
+        width: 100%;
+        height: 40%;
+    }
+
+    .img2{
+        width: 100%;
+        height: 40%;
+    }
+
+    .img3{
+        width: 100%;
+        height: 40%;
+    }
+
+    .img4{
+        width: 100%;
+        height: 40%;
+    }
+
+
+    .img5{
+        width: 100%;
+        height: 40%;
+    }
+
+    .img6{
+        width: 100%;
+        height: 40%;
+    }
+
+    .img7{
+        width: 100%;
+        height: 40%;
+    }
+
+    .img8{
+        width: 100%;
+        height: 40%;
+    }
+
+    .img9{
+        width: 100%;
+        height: 40%;
+    }
+
+    .img10{
+        width: 100%;
+        height: 40%;
+    }
+
+    .img11{
+        width: 100%;
+        height: 40%;
+    }
+
+    .img12{
+        width: 100%;
+        height: 40%;
+    }
+
+    .img13{
+        width: 100%;
+        height: 40%;
+    }
+
+    .img14{
+        width: 100%;
+        height: 40%;
+    }
+
+    .container-text{
+        width: 100%;
+        height: 60%;
+        padding: 80px;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    .container-text{
+        padding: 20px;
+    }
+
+    .container-text h1{
+        font-size: 20px;
+    }
+
+    .container-text p{
+        font-size: 12px;
+    }
+}
