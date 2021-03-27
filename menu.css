@@ -1,0 +1,55 @@
+* {
+ margin: 0px;
+ padding: 0px;
+}
+body{
+  background:  url("imagenes/logo.jpeg");
+  height: 100hv;
+}
+#menu{
+  width: 100%;
+  height: auto;
+  background-color: #9FB825;
+  border-top: 15px solid #efb810;
+}
+#info{
+  float: left;
+  padding: 0.5%;
+  text-align: center;
+  margin-right: 8%;
+  margin-left: 2%;
+}
+#info h1{
+  font-family: Edwardian Script ITC;
+  font-size: 34px;
+  color: white;
+}
+#info h3{
+  font-family: Arial;
+  color: white;
+  font-size: 12px;
+}
+#lis{
+  float: right;
+}
+#listamenu a{
+  text-decoration: none;
+  font-size: 13px;
+  font-family: cursive;
+  color:white;
+}
+#listamenu  li{
+    display:inline-block;
+    width:auto;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    }
+.separador{
+  color: #778A1C ;
+}
+#listamenu a:hover{
+  border-bottom:  3px solid #efb810;
+}
