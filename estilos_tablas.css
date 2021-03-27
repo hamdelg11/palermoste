@@ -1,0 +1,67 @@
+.contenido-tabla{
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
+#verde{
+  background-color: #7BBD2C;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+#blanco{
+  background-color: #2CB59C;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+  }
+#negro{
+  background-color: black;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+#pu{
+  background-color: #B73030;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+  }
+#oolong{
+  background-color: #D68D29;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+#honey{
+  background-color: #E5B40C;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+#rooibos{
+  background-color: #D94404;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+#tisana{
+  background-color: #DD1B00;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.contenido-tabla th,.contenido-tabla td{
+    padding: 12px 15px;
+    font-size: medium;
+    font-family: Verdana;
+}
+.contenido-tabla tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
