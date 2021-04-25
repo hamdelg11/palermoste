@@ -1,110 +1,370 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Precios</title>
-        <link rel="stylesheet"  type="text/css" href="menu.css">
-        <link rel="stylesheet" type="text/css" href="style_vent.css"/>
-        <script type="text/javascript" src="js/productos.js"></script>
+<html lang="en">
 
-    </head>
-    <body>
-      <div id=menu>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css1/bootstrap.min.css">
+    <script src="js/popper.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="css1/sweetalert2.min.css">
 
-        <div id="info">
-          <h1>Palermo's Tea</h1>
-          <h3>Pasion por el té</h3>
-        </div>
-        <nav id="list">
-          <ul id="listamenu">
-            <li><a href="index.html">¿Quiénes somos?</a></li>
-            <li class="separador">|</li>
-            <li ><a href="valores.html">¿Qué nos representa?</a></li>
-            <li class="separador">|</li>
-            <li><a href="informacion.html">¿Sabias qué?</a></li>
-            <li class="separador">|</li>
-            <li><a href="catalogo.html">Catalogo</a></li>
-            <li class="separador">|</li>
-            <li><a href="tablas.html">Precios</a></li>
-            <li class="separador">|</li>
-            <li><a href="venta.html">Realizar compra</a></li>
-           </ul>
-        </nav>
-      </div>
+    <title>Palermos Tea</title>
+</head>
 
+<body>
 
-        <section class="padre form-register">
-            <h1> Venta de productos</h1>
+    <header>
+        <div class="container">
+            <div class="row align-items-stretch justify-content-between">
+                <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success">
+                    <a class="navbar-brand" href="index.html">Productos Palermos Tea</a>
+                    <a class="navbar-brand" href="index.html">¿Quienes somos?</a>
+                    <a class="navbar-brand" href="valores.html">¿Que nos representa?</a>
+                    <a class="navbar-brand" href="informacion.html">¿Sabias que?</a>
+                    <a class="navbar-brand" href="catalogo.html">Catalogo</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <img src="IMAGES/cart.jpeg" class="nav-link dropdown-toggle img-fluid" height="70px"
+                                    width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false"></img>
+                                <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                                    <table id="lista-carrito" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
 
-            <div class="form">
-                    <form name="formulario1" action="#">
-                <select class="seleccion cajaForm controls " name="cosa" onchange="cambia()" >
-                    <option value="0">Seleccione su tipo de producto que desea.</option>
-                    <option value="1">Té verde</option>
-                    <option value="2">Té blanco</option>
-                    <option value="3">Té negro</option>
-                    <option value="4">Tisanas</option>
-
-                </select>
-
-
-                <div>
-                    <select class="seleccion cajaForm controls" name="opt" >
-
-
-                    <option value="-">-
-
-                 </div>
-<br>
-                    <div class="matri"></div>
-
-
-
-
-                    <div class="matri">
-
-                        <input required placeholder="Ingrese su nombre(s) completo" name="nonbre" type="text" class="cajaForm controls">
+                                    <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+                                    <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar
+                                        Compra</a>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-                    <div class="select">
-                        <select required id="selectCantidad" name="Cantidad" class="form-control cajaForm controls">
-                            <option value="">Seleccione su porcion que desea.</option>
+    <main>
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+            <h1 class="display-4 mt-4">Lista de Productos</h1>
+            <p class="lead">Selecciona uno de nuestros productos</p>
+        </div>
 
-                                <option value="1">50 gramos</option>
-                                <option value="2">100 gramos</option>
-                                <option value="3">250 gramos</option>
-                                <option value="4">1 kilogramo</option>
+        <div class="container" id="lista-productos">
+            
+            <div class="card-deck mb-3 text-center">
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Apple Chai</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="IMAGES/apple chai3.PNG" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$ <span class="">1425</span> KG</h1>
 
-            </select>
-                </div>
-                        <div>
-
-
-                        <input type="email" required placeholder="Ingrese correo electronico" class="cajaForm controls">
-
-
-                        </div>
-
-                        <div>
-
-
-                            <input type="text" maxlength="10" required placeholder="Ingrese su numero de telefono" class="cajaForm controls">
-
-
-                            </div>
-
-
-                        <input type="submit" value="Comprar" class="botons">
-
-
-
-
-
-
-            </form>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>50 Grs $115</li>
+                            <li>100 Grs $195</li>
+                            <li>250 Grs $385</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-success agregar-carrito" data-id="1">Agregar al carrito</a>
+                    </div>
                 </div>
 
-        </section>
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Chai Verde</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="IMAGES/chai verde3.PNG" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">1215</span> KG</h1>
 
-    </body>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>50 Grs $95</li>
+                            <li>100 Grs $165</li>
+                            <li>250 Grs $350</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-success agregar-carrito" data-id="2">Agregar al carrito</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Choco Vainilla</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="IMAGES/choco vainilla3.PNG" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">1075</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>50  Grs $95</li>
+                            <li>100 Grs $145</li>
+                            <li>250 Grs $320</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-success agregar-carrito" data-id="3">Agregar al carrito</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card-deck mb-3 text-center">
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Earl Grey con Bergamota</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="IMAGES/earl grey con bergamota3.PNG" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">1215</span>KG</h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>50  Grs $95.00</li>
+                            <li>100 Grs $165.00</li>
+                            <li>250 Grs $350.00</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-success agregar-carrito" data-id="4">Agregar al carrito</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Granada Jengibre</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="IMAGES/granada jengibre3.PNG" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">1783</span> KG</h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>50  Grs $125.00</li>
+                            <li>100 Grs $230.00</li>
+                            <li>250 Grs $500.00</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-success agregar-carrito" data-id="5">Agregar al carrito</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">GUN POWDER MENTA</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="IMAGES/Gun Powder3.PNG" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">1220</span> KG</h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>50  Grs $100.00</li>
+                            <li>100 Grs $175.00</li>
+                            <li>200 Grs $340.00</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-success agregar-carrito" data-id="6">Agregar al carrito</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-deck mb-3 text-center">
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">HONEYBUSH EARL GREY</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="IMAGES/honeybush earl grey3.PNG" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">1425</span> KG</h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>50  Grs $125.00</li>
+                            <li>100 Grs $279.00</li>
+                            <li>250 Grs $395.00</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-success agregar-carrito" data-id="7">Agregar al carrito</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">JASMINE MINT</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="IMAGES/jasmine mint3.PNG" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">1335</span> KG</h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>50  Grs $105.00</li>
+                            <li>100 Grs $185.00</li>
+                            <li>250 Grs $385.00</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-success agregar-carrito" data-id="8">Agregar al carrito</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">KANE WA</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="IMAGES/kane-wa3.PNG" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">1270</span> KG</h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>50  Grs $95.00</li>
+                            <li>100 Grs $185.00</li>
+                            <li>250 Grs $360.00</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-success agregar-carrito" data-id="9">Agregar al carrito</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-deck mb-3 text-center">
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">MANZANA VAINILLA</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="IMAGES/manzana-vainilla3.PNG" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">1260</span> KG</h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>50  Grs $95.00</li>
+                            <li>100 Grs $185.00</li>
+                            <li>250 Grs $360.00</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-success agregar-carrito" data-id="7">Agregar al carrito</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">ROOIBOS CARAMEL</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="IMAGES/rooibos caramel3.PNG" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$ <span class="">1075</span> KG</h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>50  Grs $85.00</li>
+                            <li>100 Grs $145.00</li>
+                            <li>250 Grs $315.00</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-success agregar-carrito" data-id="8">Agregar al carrito</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">TÉ NEGRO CON CHOCOLATE</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="IMAGES/te negro con chocolate3.PNG" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">1215</span> KG</h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>50  Grs $90.00</li>
+                            <li>100 Grs $165.00</li>
+                            <li>250 Grs $350.00</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-success agregar-carrito" data-id="9">Agregar al carrito</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-deck mb-3 text-center">
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Té Verde de indonesia</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="IMAGES/te verde3.PNG" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">1260</span> KG</h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>50  Grs $200.00</li>
+                            <li>100 Grs $395.00</li>
+                            <li>250 Grs $895.00</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-success agregar-carrito" data-id="7">Agregar al carrito</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Vainilla Jasmine </h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="IMAGES/vainilla jazmin3.PNG" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$ <span class="">1785</span> KG</h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>50  Grs $135.00</li>
+                            <li>100 Grs $235.00</li>
+                            <li>250 Grs $479.00</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-success agregar-carrito" data-id="8">Agregar al carrito</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">TÉ NEGRO CON CHOCOLATE</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="IMAGES/te negro con chocolate3.PNG" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$<span class="">1215</span> KG</h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>50  Grs $90.00</li>
+                            <li>100 Grs $165.00</li>
+                            <li>250 Grs $350.00</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-success agregar-carrito" data-id="9">Agregar al carrito</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </main>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/pedido.js"></script>
+
+</body>
+
 </html>
