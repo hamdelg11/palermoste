@@ -78,26 +78,26 @@
   font-weight: bold;
   color: #9FB825;
 }
-.contDevolucion h3{
+.contCaja h3{
   font-family: Edwardian Script ITC;
   font-size: xx-large;
   font-weight: bold;
   color: #efb810;
   text-align: left;
 }
-.contDevolucion h4{
+.contCaja h4{
   font-family: cursive;
   font-size: medium;
   font-weight: bold;
   color: #9FB825;
-  text-align: center;
+  text-align: left;
 }
-.contDevolucion p{
+.contCaja p{
   font-family:serif;
   font-size: medium;
   text-align: justify;
 }
-.contDevolucion li{
+.contCaja li{
   font-family:serif;
   font-size: medium;
   text-align: justify;
