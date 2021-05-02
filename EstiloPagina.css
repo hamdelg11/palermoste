@@ -1,147 +1,66 @@
-#encabezado{
-  float: left;
-  margin-left: 15%;
+.content{
+  width: auto;
+  height: auto;
   margin-top: 2%;
-  width: 40%;
-  height: auto;
-  padding: 2%;
-  background-color: #efb810;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  margin-bottom: 2%;
 }
-#encabezado p{
-  font-family: Edwardian Script ITC;
-  font-size: xx-large;
-  font-weight: bold;
-  color: white;
-  text-align: left;
-}
-#cuerpo{
-  float: left;
-  margin-left: 15%;
-  width: 40%;
-  height: auto;
-  padding: 2%;
-  background-color: white;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
-#cuerpo p{
-  font-family:serif;
-  font-size: medium;
-  text-align: justify;
-}
-#Cont1{
-  float: left;
+.caja{
   margin-left: 5%;
-  margin-top: 2%;
-  width: 16%;
+  margin-right: 5%;
+  margin-bottom: 2%;
+  margin-top: 0.5%;
   height: auto;
+  width: auto;
   padding: 2%;
-  background-color: #AD8927;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  align-items: center;
 
 }
-#Cont1 p{
+.contInfo h3{
   font-family: Edwardian Script ITC;
   font-size: xx-large;
   font-weight: bold;
-  color: white;
+  color: #efb810;
   text-align: left;
 }
-#Cont2{
-  float: left;
-  margin-left: 5%;
-  width: 16%;
-  height: auto;
-  padding: 2%;
-  background-color: white;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
-#Cont2 p{
-  font-family:serif;
-  font-size: medium;
-  text-align: justify;
-  font-weight: bold;
-}
-#Cont2 img{
-  width: 15%;
-  height: auto;
-}
-#Cont2 a{
-  font-family: cursive;
-  font-size: small;
-  text-decoration: none;
-  color: black;
-  padding: 10%;
-}
-.titulo{
-  float: left;
-  margin-left: 5%;
-  margin-top: 3%;
-  width: 38%;
-  height: auto;
-  padding: 1% 2% 1% 2%;
-  background-color: #efb810;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-.titulo p{
-  font-family: Edwardian Script ITC;
-  font-size: xx-large;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-}
-.parrafo{
-  float: left;
-  margin-left: 5%;
-  width: 38%;
-  height: auto;
-  padding: 2%;
-  background-color: white;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
-.parrafo p{
+.contInfo p{
   font-family:serif;
   font-size: medium;
   text-align: justify;
 }
-#titulo2{
+
+.imgMision img{
   float: right;
-  margin-right: 5%;
-  margin-top: 3%;
-  width: 38%;
-  height: auto;
-  padding: 1% 2% 1% 2%;
-  background-color: #AD8927;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  height: 250px;
+  margin-left: 5%;
+  position: static;
 }
-#titulo2 p{
+.contMision h3{
   font-family: Edwardian Script ITC;
   font-size: xx-large;
   font-weight: bold;
-  color: white;
-  text-align: center;
+  color: #9FB825;
+  text-align: left;
 }
-#parrafo2{
-  float: right;
+.contMision p{
+  font-family:serif;
+  font-size: medium;
+  text-align: justify;
+}
+.imgValores img{
+  float: left;
+  height: 320px;
   margin-right: 5%;
-  width: 38%;
-  height: auto;
-  padding: 2%;
-  background-color: white;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  margin-bottom: 5%;
+  position: static;
 }
-.normal{
-  padding-left: 3%;
-  font-family:sans-serif;
+.contValores h3{
+  font-family: Edwardian Script ITC;
+  font-size: xx-large;
+  font-weight: bold;
+  color: #efb810;
+  text-align: left;
+}
+.contValores p{
+  font-family:serif;
   font-size: medium;
   text-align: justify;
 }
@@ -157,28 +76,89 @@
   font-size: large;
   text-align: justify;
   font-weight: bold;
-  color: #AD8927;
+  color: #9FB825;
 }
-.contenedor{
-  width: 22%;
+.contDevolucion h3{
+  font-family: Edwardian Script ITC;
+  font-size: xx-large;
+  font-weight: bold;
+  color: #efb810;
+  text-align: left;
+}
+.contDevolucion h4{
+  font-family: cursive;
+  font-size: medium;
+  font-weight: bold;
+  color: #9FB825;
+  text-align: center;
+}
+.contDevolucion p{
+  font-family:serif;
+  font-size: medium;
+  text-align: justify;
+}
+.contDevolucion li{
+  font-family:serif;
+  font-size: medium;
+  text-align: justify;
+}
+.form{
+  width: 35%;
   height: auto;
-  margin-left: 5%;
-  background-color: white;
-  float: left;
+  margin-left: 32.5%;
+  margin-right: 32.5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border: solid 1px #EBEDEF;
+  align-items: center;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
   padding: 2%;
-  margin-top: 1.5%;
-  margin-bottom: 1.5%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  /*cursor: default;
-  transition: all 400ms ease;
-  overflow: hidden;*/
 }
-.contenedor:hover{
-  zoom: 110%;
+
+.form input{
+  width: 90%;
+  height: 27px;
+  font-family: 'Open Sans', sans-serif;
 }
-.contenedor img{
-  width: 25%;
-  height: auto;
-  float: left;
-  margin-right: 4%;
+
+.form a{
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  color: #0097E8;
+}
+#Boton1{
+  width: 80%;
+  height: 27px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding: 1%;
+  background-color: #0097E8;
+  border: solid 1px #0097E8;
+
+}
+#Boton1 a{
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+#Boton2{
+  width: 80%;
+  height: 27px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding: 1%;
+  background-color: grey;
+  border: solid 1px grey;
+}
+#Boton2 a{
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
